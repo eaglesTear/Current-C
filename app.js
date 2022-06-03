@@ -41,11 +41,11 @@ const requestOptions = {
   headers: myHeaders
 }
 
-/* 
+/*
+  ERROR HANDLER
   Function to handle errors that may occur in the rendering of the results ('conversion') page, or home page due to failure to connect with the API.
   It takes an 'error' parameter that is itself the value of any 'catch' function passed in, as well as the 'response' argument. 
-  The latter allows the rendering of the error.ejs page. 
-  The error is stored in a var, and then rendered on the error page to produce a more accurate, dynamic message in addition to the default error message displayed on the page itself.
+  The latter allows the rendering of the error.ejs page. The error is stored in a var and then rendered on the error page to produce a more accurate, dynamic message in addition to the default error message displayed.
 */
 
 const handleError = (error, res) => {

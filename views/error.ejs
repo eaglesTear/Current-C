@@ -1,0 +1,15 @@
+<%- include("partials/header") -%>
+
+<section class="error main-container">
+  <h2>Apologies!</h2>
+  <p>Something has gone wrong - those pesky gremlins...</p>
+  <ul>
+    <li>Please check your internet connection.</li>
+    <li>Other likely suspects: <%= errorMessage %></li>
+  </ul>
+  <form action="error.ejs" method="POST">
+    <button type="submit">Try Again</button>
+  </form>
+</section>
+
+<%- include("partials/footer") -%>

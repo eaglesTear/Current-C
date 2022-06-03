@@ -1,0 +1,54 @@
+<%- include("partials/header") -%>
+
+<section class="main-container">
+  <div class="flex-container">
+    <img
+      src="images/currency.png"
+      alt="currency symbols with conversion arrows"
+    />
+    <header>
+      <h1>Current-C</h1>
+    </header>
+  </div>
+  
+  <p>
+    Looking to go away? Find out what your money is worth courtesy of
+    <a href="https://apilayer.com/">APILayer.</a>
+  </p>
+
+  <form action="/" method="POST">
+    <div class="flex-container-2">
+      <input
+        type="number"
+        name="amount"
+        step="1"
+        min="0"
+        placeholder="Amount"
+        required
+      />
+      <select id="from" name="currency1" required>
+        <option value="" selected disabled>From</option>
+        <% for (const currency in currencyList) { %>
+        <option value="<%= currency %>">
+          <%= `${currency}: ${currencyList[currency]}` %>
+        </option>
+        <% } %>
+      </select>
+      <img
+        src="images/convert.svg"
+        alt="right arrow indicating 'conversion to'"
+      />
+      <select id="to" name="currency2" required>
+        <option value="" selected disabled>To</option>
+        <% for (const currency in currencyList) { %>
+        <option value="<%= currency %>">
+          <%= `${currency}: ${currencyList[currency]}` %>
+        </option>
+        <% } %>
+      </select>
+    </div>
+    <button type="submit">What's it worth?</button>
+  </form>
+</section>
+
+<%- include("partials/footer") -%>

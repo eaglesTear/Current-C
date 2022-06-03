@@ -1,0 +1,203 @@
+/* Resets and general styles */
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+  font-family: "IBM Plex Sans", Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body,
+.bg-skew,
+.content {
+  height: 100%;
+}
+
+h2,
+p {
+  margin: 1.7%;
+}
+
+p {
+  font-size: 1.1rem;
+}
+
+/* HTML container styles */
+
+body,
+tbody td,
+.main-container {
+  background: #222;
+  text-align: center;
+}
+
+.main-container {
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px,
+    rgba(0, 0, 0, 0.22) 0px 10px 10px;
+  padding: 2% 4%;
+}
+
+input,
+select,
+button,
+table,
+.main-container {
+  border-radius: 15px;
+}
+
+.main-container a {
+  color: #e572e5;
+  padding-left: 3px;
+  text-decoration: none;
+}
+
+.flex-container,
+.flex-container-2,
+.bg-skew,
+footer {
+  display: flex;
+  align-items: center;
+}
+
+.flex-container,
+.bg-skew,
+footer {
+  justify-content: center;
+}
+
+.flex-container > * {
+  margin: 1.5%;
+}
+
+.flex-container header {
+  font-size: 1.6rem;
+}
+
+.flex-container img {
+  width: 50px;
+}
+
+.flex-container-2 {
+  justify-content: space-evenly;
+  margin: 3% 0;
+}
+
+/* Background & centre content */
+
+.bg-skew {
+  background: #42c7df;
+  margin-top: -210px;
+  padding: 200px 0;
+  transform: skew(0deg, -10deg);
+  -webkit-transform: skew(0deg, -10deg);
+}
+
+.content {
+  max-width: 80%;
+  padding-top: 160px;
+  -webkit-transform: skew(0deg, 10deg);
+  transform: skew(0deg, 10deg);
+  width: 60%;
+}
+
+.content,
+footer {
+  color: #fff;
+}
+
+.content p {
+  font-style: italic;
+}
+
+/* Form elements */
+
+select,
+input,
+button {
+  border: none;
+  box-shadow: none;
+  cursor: pointer;
+  font-size: 1.1rem;
+  outline: none;
+  padding: 0 0.5em;
+}
+
+form img,
+select,
+input {
+  height: 2.2em;
+}
+
+input,
+select {
+  width: 200px;
+}
+
+button {
+  background: #f4cb5c;
+  font-size: 1.2rem;
+  padding: 10px;
+  transition: 0.5s;
+}
+
+button:hover {
+  transform: scale(1.1);
+}
+
+/* Table returned with conversion data (conversion.ejs) */
+
+table {
+  border: 3px solid #f4cb5c;
+  margin-bottom: 3%;
+  table-layout: fixed;
+  width: 100%;
+}
+
+th,
+td {
+  letter-spacing: 2px;
+  padding: 15px;
+}
+
+th {
+  color: #f4cb5c;
+  text-transform: uppercase;
+}
+
+/* Error page */
+
+.content .error {
+  margin: 0 auto;
+  width: 70%;
+}
+
+.error h2 {
+  font-size: 3rem;
+}
+
+.error li {
+  margin: 3%;
+}
+
+/* Footer styles */
+
+footer {
+  padding: 170px 0 0 0;
+}
+
+footer > * {
+  padding: 0 4px;
+}
+
+footer span,
+.main-container a:hover {
+  color: #42c7df;
+}
+
+footer img {
+  height: auto;
+  width: 16px;
+}

@@ -1,0 +1,44 @@
+<%- include("partials/header") -%>
+
+<section class="main-container">
+  <div class="flex-container">
+    <img
+      src="images/currency.png"
+      alt="currency symbols with conversion arrows"
+    />
+    <header>
+      <h1>Current-C</h1>
+    </header>
+  </div>
+
+  <div class="flex-container">
+    <h3>Conversion Successful!</h3>
+    <img src="images/check.png" alt="green check mark: success" />
+  </div>
+
+  <table>
+    <colgroup span="6"></colgroup>
+    <tr>
+      <th>Date</th>
+      <th>Rate</th>
+      <th>Amount</th>
+      <th>From</th>
+      <th>To</th>
+      <th>Result</th>
+    </tr>
+    <tr>
+      <td><%= date %></td>
+      <td><%= rate %></td>
+      <td><%= amount %></td>
+      <td><%= fromCurrency %></td>
+      <td><%= toCurrency %></td>
+      <td><%= conversion %></td>
+    </tr>
+  </table>
+
+  <form action="/conversion.ejs" method="POST">
+    <button type="submit">Convert Again</button>
+  </form>
+</section>
+
+<%- include("partials/footer") -%>

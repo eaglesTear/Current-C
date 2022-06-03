@@ -1,12 +1,14 @@
 /* 
+
 *************************************************************************************************
 Current-C: A SIMPLE CURRENCY CONVERTER APP WITH REAL-TIME DATA & CONVERSIONS
 AUTHOUR: RYAN HADLEY (eagleTears)
+*************************************************************************************************
 
 This app uses the APILayer API to provide data regarding exchange rates, and quickly converts any of the major world currencies by returning the data within a HTML table.
-Please note that this node.js app assumes ES module functionality, so you must ensure "type": "module" is added to package json file. To make the API request, I have imported 'node-fetch' to allow the JS fetch request method to be used for server-side scripting.
+Please note that this node.js app assumes ES module functionality, so you must ensure "type": "module" is added to package json file. 
+To make the API request, I have imported 'node-fetch' to allow the JS fetch request method to be used for server-side scripting.
 
-*************************************************************************************************
 */
 
 // App setup
@@ -41,7 +43,8 @@ const requestOptions = {
 
 /* 
   Function to handle errors that may occur in the rendering of the results ('conversion') page, or home page due to failure to connect with the API.
-  It takes an 'error' parameter that is itself the value of any 'catch' function passed in, as well as the 'response' argument. The latter allows the rendering of the error.ejs page. 
+  It takes an 'error' parameter that is itself the value of any 'catch' function passed in, as well as the 'response' argument. 
+  The latter allows the rendering of the error.ejs page. 
   The error is stored in a var, and then rendered on the error page to produce a more accurate, dynamic message in addition to the default error message displayed on the page itself.
 */
 
@@ -70,7 +73,9 @@ fetch("https://api.apilayer.com/exchangerates_data/symbols", requestOptions)
 
 /* 
   CONVERSION
-  Once the user makes a POST request after selecting the currencies to convert, those values are stored and passed into the API conversion endpoint. Once that response is returned, the user's choices and resulting conversion are sent back to them inside a HTML table. The rendered values of 'rate' and the 'conversion' use the toFixed method in order to reduce the decimals of those variables and make the output cleaner and more readable.
+  Once the user makes a POST request after selecting the currencies to convert, those values are stored and passed into the API conversion endpoint. 
+  When that response is returned, the user's choices and resulting conversion are sent back to them inside a HTML table. 
+  The rendered values of 'rate' and the 'conversion' use the toFixed method in order to reduce the decimals of those variables and make the output cleaner and more readable.
 */
 
 app.post("/", (req, res) => {
